@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "nrf_modem_lib.h": "c",
+        "socket.h": "c",
+        "kernel.h": "c",
+        "cerrno": "c",
+        "nrf_modem_at.h": "c",
+        "log.h": "c",
+        "lte_m_udp_connection.h": "c"
+    }
+}

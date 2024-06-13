@@ -1,0 +1,28 @@
+menu "lte_m udp settings"
+
+config UDP_SERVER_ADDRESS_STATIC
+	string "UDP server IP address"
+	default "8.8.8.8"
+
+config UDP_SERVER_PORT
+	int "UDP server port number"
+	default "2469"
+
+config UDP_PSM_ENABLE
+	bool "Enable LTE Power Saving Mode (PSM)"
+	default y
+	select LTE_PSM_REQ
+
+config UDP_EDRX_ENABLE
+	bool "Enable LTE enhanced Discontinuous Reception (eDRX)"
+	select LTE_EDRX_REQ
+
+endmenu
+
+# module = UDP
+# module-str = UDP sample
+# source "${ZEPHYR_BASE}/subsys/logging/Kconfig.template.log_config"
+
+menu "Zephyr Kernel"
+source "Kconfig.zephyr"
+endmenu
